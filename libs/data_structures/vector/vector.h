@@ -47,5 +47,13 @@ void pushBack(vector *v, int x);
 // Добавляет в вектор v элемент x
 void popBack (vector *v);
 
+// Возвращает адрес элемента по индексу i в векторе v
+int* atVector(vector *v, size_t i);
+
+// Возвращает адрес последнего элемента в векторе v
+int* back(vector *v);
+
+// Возвращает адрес первого элемента в векторе v
+int* front(vector  *v);
 
 #endif //COURSE_VECTOR_H
