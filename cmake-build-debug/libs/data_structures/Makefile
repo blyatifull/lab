@@ -253,6 +253,36 @@ vector\vector.c.s:
 	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
 .PHONY : vector\vector.c.s
 
+vector_test\vector_test.obj: vector_test\vector_test.c.obj
+.PHONY : vector_test\vector_test.obj
+
+# target to build an object file
+vector_test\vector_test.c.obj:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\vector_test\vector_test.c.obj
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : vector_test\vector_test.c.obj
+
+vector_test\vector_test.i: vector_test\vector_test.c.i
+.PHONY : vector_test\vector_test.i
+
+# target to preprocess a source file
+vector_test\vector_test.c.i:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\vector_test\vector_test.c.i
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : vector_test\vector_test.c.i
+
+vector_test\vector_test.s: vector_test\vector_test.c.s
+.PHONY : vector_test\vector_test.s
+
+# target to generate assembly for a file
+vector_test\vector_test.c.s:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\vector_test\vector_test.c.s
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : vector_test\vector_test.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -274,6 +304,9 @@ help:
 	@echo ... vector/vector.obj
 	@echo ... vector/vector.i
 	@echo ... vector/vector.s
+	@echo ... vector_test/vector_test.obj
+	@echo ... vector_test/vector_test.i
+	@echo ... vector_test/vector_test.s
 .PHONY : help
 
 

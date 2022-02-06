@@ -6,5 +6,7 @@ add_library(data_structures
         unordered_array_set/unordered_array_set.c
         unordered_array_set/unordered_array_set.h
         vector/vector.c
-        vector/vector.h)
+        vector/vector.h
+        vector_test/vector_test.c
+        vector_test/vector_test.h)
 

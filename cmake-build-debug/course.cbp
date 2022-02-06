@@ -208,6 +208,12 @@
 		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/vector/vector.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/vector_test/vector_test.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/vector_test/vector_test.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/blyatifull/CLionProjects/course/main.c">
 			<Option target="course"/>
 		</Unit>
