@@ -67,7 +67,7 @@ void test_front_oneElementInVector(){
     deleteVector(&v);
 }
 
-int main() {
+void test_vector(){
     test_pushBack_notEmptyVector();
     test_pushBack_EmptyVector();
 
@@ -76,6 +76,10 @@ int main() {
 
     test_back_oneElementInVector();
     test_front_oneElementInVector();
+}
+
+int main() {
+
 
     return 0;
 }

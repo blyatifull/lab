@@ -32,11 +32,7 @@ void clear(vector *v){
 }
 
 void shrinkToFit (vector *v) {
-    if ((v)->size != (v)->capacity) {
-        (v)->data = (int *) realloc((v)->data, sizeof(int) * (v)->size);
-
-        (v)->capacity = (v)->size;
-    }
+    reserve(v, 0);
 }
 
 void deleteVector(vector *v){
