@@ -8,5 +8,7 @@ add_library(data_structures
         vector/vector.c
         vector/vector.h
         vector_test/vector_test.c
-        vector_test/vector_test.h)
+        vector_test/vector_test.h
+        vector_void/vector_void.c
+        vector_void/vector_void.h)
 

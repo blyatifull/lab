@@ -283,6 +283,36 @@ vector_test\vector_test.c.s:
 	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
 .PHONY : vector_test\vector_test.c.s
 
+vector_void\vector_void.obj: vector_void\vector_void.c.obj
+.PHONY : vector_void\vector_void.obj
+
+# target to build an object file
+vector_void\vector_void.c.obj:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\vector_void\vector_void.c.obj
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : vector_void\vector_void.c.obj
+
+vector_void\vector_void.i: vector_void\vector_void.c.i
+.PHONY : vector_void\vector_void.i
+
+# target to preprocess a source file
+vector_void\vector_void.c.i:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\vector_void\vector_void.c.i
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : vector_void\vector_void.c.i
+
+vector_void\vector_void.s: vector_void\vector_void.c.s
+.PHONY : vector_void\vector_void.s
+
+# target to generate assembly for a file
+vector_void\vector_void.c.s:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\vector_void\vector_void.c.s
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : vector_void\vector_void.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -307,6 +337,9 @@ help:
 	@echo ... vector_test/vector_test.obj
 	@echo ... vector_test/vector_test.i
 	@echo ... vector_test/vector_test.s
+	@echo ... vector_void/vector_void.obj
+	@echo ... vector_void/vector_void.i
+	@echo ... vector_void/vector_void.s
 .PHONY : help
 
 
