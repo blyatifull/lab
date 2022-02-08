@@ -1,7 +1,7 @@
 #include "vector_void.h"
 
 vectorVoid createVectorV(size_t size, size_t baseTypeSize){
-    int *v = (void *)malloc(size * baseTypeSize);
+    void *v = (void *)malloc(size * baseTypeSize);
 
     if (v == NULL) {
         fprintf(stderr, "bad alloc");
@@ -80,7 +80,7 @@ void pushBackV(vectorVoid *v, void *source) {
 }
 
 void popBackV(vectorVoid *v){
-    if((v)->size == 0){
+    if(isEmptyV(v)){
         fprintf(stderr, "Is empty vector!");
         exit(1);
     }
