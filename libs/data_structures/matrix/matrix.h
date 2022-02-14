@@ -28,5 +28,7 @@ matrix *getMemArrayOfMatrices(int nMatrices, int nRows, int nCols);
 
 void freeMemMatrix(matrix m);
 
+void freeMemMatrices(matrix *ms, int nMatrices);
+
 
 #endif //COURSE_MATRIX_H
