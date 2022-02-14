@@ -3,9 +3,7 @@
 #include "C:/Users/blyatifull/CLionProjects/course/libs/data_structures/vector_void/vector_void.h"
 
 int main() {
-
-
-
+    test_vector();
 
     return 0;
 }
