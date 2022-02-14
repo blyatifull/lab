@@ -4,6 +4,10 @@
 libs\data_structures\CMakeFiles\data_structures.dir\bitset\bitset.c.obj: ..\libs\data_structures\bitset\bitset.c
 libs\data_structures\CMakeFiles\data_structures.dir\bitset\bitset.c.obj: ..\libs\data_structures\bitset\bitset.h
 
+libs\data_structures\CMakeFiles\data_structures.dir\matrix\matrix.c.obj: ..\libs\data_structures\matrix\matrix.c
+libs\data_structures\CMakeFiles\data_structures.dir\matrix\matrix.c.obj: ..\libs\data_structures\matrix\matrix.h
+libs\data_structures\CMakeFiles\data_structures.dir\matrix\matrix.c.obj: ..\libs\algorithms\array\array.h
+
 libs\data_structures\CMakeFiles\data_structures.dir\ordered_array_set\ordered_array_set.c.obj: ..\libs\algorithms\array\array.h
 libs\data_structures\CMakeFiles\data_structures.dir\ordered_array_set\ordered_array_set.c.obj: ..\libs\data_structures\ordered_array_set\ordered_array_set.c
 libs\data_structures\CMakeFiles\data_structures.dir\ordered_array_set\ordered_array_set.c.obj: ..\libs\data_structures\ordered_array_set\ordered_array_set.h
@@ -20,4 +24,8 @@ libs\data_structures\CMakeFiles\data_structures.dir\vector_test\vector_test.c.ob
 libs\data_structures\CMakeFiles\data_structures.dir\vector_test\vector_test.c.obj: ..\libs\data_structures\vector_test\vector_test.c
 libs\data_structures\CMakeFiles\data_structures.dir\vector_test\vector_test.c.obj: ..\libs\data_structures\vector_test\vector_test.h
 libs\data_structures\CMakeFiles\data_structures.dir\vector_test\vector_test.c.obj: ..\libs\algorithms\array\array.h
+
+libs\data_structures\CMakeFiles\data_structures.dir\vector_void\vector_void.c.obj: ..\libs\data_structures\vector_void\vector_void.c
+libs\data_structures\CMakeFiles\data_structures.dir\vector_void\vector_void.c.obj: ..\libs\data_structures\vector_void\vector_void.h
+libs\data_structures\CMakeFiles\data_structures.dir\vector_void\vector_void.c.obj: ..\libs\algorithms\array\array.h
 

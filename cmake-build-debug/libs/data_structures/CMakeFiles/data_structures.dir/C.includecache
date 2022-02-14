@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/vector/vector.c
-vector.h
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/vector/vector.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix/matrix.c
+matrix.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix/matrix.h
 
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/vector/vector.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix/matrix.h
 stdint.h
 -
 assert.h

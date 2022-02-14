@@ -53,6 +53,21 @@ void outputMatrices(matrix *ms, int nMatrices){
         outputMatrix(ms[i]);
 }
 
+void swap(int *a, int *b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void swapRows(matrix m, int i1, int i2){
+    swap((int*) &(m).values[i1], (int*) &(m).values[i2]);
+}
+
+void swapColumns(matrix m, int j1, int j2){
+    for (int i = 0; i < (m).nRows; ++i)
+        swap((int*) &(m).values[i][j2], (int*) &(m).values[i][j2]);
+}
+
 
 
 
