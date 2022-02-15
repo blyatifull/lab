@@ -11,7 +11,7 @@
 
 #include "C:/Users/blyatifull/cLionProjects/course/libs/algorithms/array/array.h"
 
-typedef struct matrix {
+typedef struct{
     int **values;  // элементы матрицы
     int nRows;     // кол-во рядов
     int nCols;     // кол-во столбцов
@@ -56,10 +56,12 @@ position getMinValuePos(matrix m);
 
 position getMaxValuePos(matrix m);
 
-void insertionSortMatrix(int *a, matrix *m, void (f)(matrix *, int, int), int rowOrCols);
+void insertionSortMatrix(int *a, matrix *m, void (f)(matrix, int, int), int rowsOrCols);
 
-void insertionSortRowsMatrixByRowsCriteria(matrix *m, int (*criteria)(int *, int));
+void insertionSortRowsByCriteria(matrix m, int (criteria)(int *, int));
 
-void insertionSortRowsMatrixByColsCriteria(matrix *m, int (*criteria)(int *, int));
+void insertionSortColsByCriteria(matrix m, int (*criteria)(int *, int));
+
+int getMax (int const *row, int sizeRow);
 
 #endif //COURSE_MATRIX_H

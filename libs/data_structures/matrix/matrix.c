@@ -1,9 +1,9 @@
 #include "matrix.h"
 
 matrix getMemMatrix(int nRows, int nCols){
-    int **values = (int **) malloc(nRows * sizeof(int *));
+    int **values = (int **) malloc(sizeof(int *) * nRows);
     for (int i = 0; i < nRows; ++i)
-        values[i] = (int *) malloc(nCols * sizeof(int));
+        values[i] = (int *) malloc(sizeof(int) * nCols);
     return (matrix){values, nRows, nCols};
 }
 
@@ -54,7 +54,7 @@ void outputMatrices(matrix *ms, int nMatrices){
 }
 
 void swapRows(matrix m, int i1, int i2){
-    swap((int*) &(m).values[i1], (int*) &(m).values[i2]);
+    swap((int*)&(m).values[i1], (int *)&(m).values[i2]);
 }
 
 void swapColumns(matrix m, int j1, int j2){
@@ -141,44 +141,47 @@ position getMaxValuePos(matrix m){
     return maxPos;
 }
 
-void insertionSortMatrix(int *a, matrix *m, void (f)(matrix *, int, int), int rowOrCols){
-    for (int i = 0; i < rowOrCols; ++i) {
+void insertionSortMatrix(int *a, matrix *m, void (f)(matrix, int, int), int rowsOrCols){
+    for (int i = 1; i < rowsOrCols; ++i) {
         int k = i;
-        while (k > 0 && a[i - 1] >= a[k]){
-            swap(&a[i - 1], &a[k]);
-            f(m, i - 1, k);
+        while (k > 0 && a[k - 1] >= a[k]){
+            swap(&a[k - 1], &a[k]);
+            f(*m, k - 1, k);
 
             k--;
         }
     }
 }
 
-void insertionSortRowsMatrixByRowsCriteria(matrix *m, int (*criteria)(int *, int)){
-    int *rowsArrCriteria = (int *) malloc((m)->nRows * sizeof(int));
-    for (int i = 0; i < (m)->nRows; ++i)
-        rowsArrCriteria[i] = criteria((m)->values[i], (m)->nCols);
+void insertionSortColsByCriteria(matrix m, int (criteria)(int *, int)) {
+    int criteriaArr[30];
+    for (int i = 0; i < (m).nCols; ++i) {
+        int tempArr[30];
+        for (int j = 0; j < (m).nRows; ++j)
+            tempArr[i] = (m).values[j][i];
 
-    insertionSortMatrix(rowsArrCriteria, m, swapRows, (m)->nRows);
-
-    free(rowsArrCriteria);
-}
-
-void insertionSortRowsMatrixByColsCriteria(matrix *m, int (*criteria)(int *, int)){
-    int *colsArrCriteria = (int*) malloc((m)->nCols * sizeof(int));
-    for (int i = 0; i < (m)->nCols;++i){
-        int *t = (int*) malloc((m)->nRows * sizeof (int));
-        for (int j = 0; j < (m)->nRows; ++j) {
-            t[i] = (m)->values[i][j];
-        }
-        colsArrCriteria[i] = criteria(t, m->nCols);
-
-        free(t);
+        criteriaArr[i] = criteria(tempArr, (m).nCols);
     }
-    insertionSortMatrix(colsArrCriteria, m, swapColumns, (m)->nCols);
 
-    free(colsArrCriteria);
+    insertionSortMatrix(criteriaArr, &m, swapColumns, (m).nCols);
 }
 
+void insertionSortRowsByCriteria(matrix m, int (criteria)(int *, int)){
+    int criteriaArr[30];
+    for (int i = 0; i < (m).nRows; ++i)
+        criteriaArr[i] = criteria((m).values[i], (m).nCols);
+
+    insertionSortMatrix(criteriaArr, &m, swapRows, (m).nRows);
+}
+
+int getMax(const int *row, int sizeRow){
+    int maxElement = row[0];
+    for (int i = 0; i < sizeRow; ++i)
+        if (maxElement < row[i])
+            maxElement = row[i];
+
+    return maxElement;
+}
 
 
 

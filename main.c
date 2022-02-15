@@ -8,13 +8,13 @@ void swapRowsWithMinAndMaxElements(matrix m){
 }
 
 int main() {
-    matrix x = getMemMatrix(3, 3);
+    matrix m = getMemMatrix(3, 3);
 
-    inputMatrix(x);
+    inputMatrix(m);
 
-    swapRowsWithMinAndMaxElements(x);
+    insertionSortRowsByCriteria(m, getMax);
 
-    outputMatrix(x);
+    outputMatrix(m);
 
     return 0;
 }
