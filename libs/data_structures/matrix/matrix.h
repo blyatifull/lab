@@ -42,5 +42,24 @@ void swapRows(matrix m, int i1, int i2);
 
 void swapColumns(matrix m, int j1, int j2);
 
+bool isSquareMatrix(matrix m);
+
+bool twoMatricesEqual(matrix m1, matrix m2);
+
+bool isEMatrix(matrix m);
+
+bool isSymmetricMatrix(matrix m);
+
+void  transposeSquareMatrix(matrix m);
+
+position getMinValuePos(matrix m);
+
+position getMaxValuePos(matrix m);
+
+void insertionSortMatrix(int *a, matrix *m, void (f)(matrix *, int, int), int rowOrCols);
+
+void insertionSortRowsMatrixByRowsCriteria(matrix *m, int (*criteria)(int *, int));
+
+void insertionSortRowsMatrixByColsCriteria(matrix *m, int (*criteria)(int *, int));
 
 #endif //COURSE_MATRIX_H
