@@ -66,4 +66,6 @@ int getMax (int const *row, int sizeRow);
 
 int getMin(const int *row, int sizeRow);
 
+matrix mulMatrices (matrix m1, matrix m2);
+
 #endif //COURSE_MATRIX_H

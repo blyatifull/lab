@@ -192,6 +192,24 @@ int getMin(const int *row, int sizeRow){
     return minElement;
 }
 
+matrix mulMatrices(matrix m1, matrix m2){
+    if ((m1).nRows != (m2).nCols){
+        fprintf(stderr, "(m1).nRows != (m2).nCols!");
+    }
+
+    matrix m3 = getMemMatrix((m2).nRows, (m1).nCols);
+    for (int i = 0; i < (m1).nCols; ++i) {
+        for (int j = 0; j < (m2).nRows; ++j) {
+            (m3).values[i][j] = 0;
+            for (int k = 0; k < (m1).nRows; ++k) {
+                (m3).values[i][j] += (m1).values[i][k] * (m2).values[k][j];
+            }
+        }
+    }
+
+    return m3;
+}
+
 
 
 
