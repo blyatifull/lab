@@ -68,4 +68,8 @@ int getMin(const int *row, int sizeRow);
 
 matrix mulMatrices (matrix m1, matrix m2);
 
+long long getSum(const int *row, int sizeRow);
+
+bool isUnique(const long long *arr, int size);
+
 #endif //COURSE_MATRIX_H

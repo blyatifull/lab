@@ -20,6 +20,15 @@ void getSquareOfMatrixIfSymmetric(matrix m){
         mulMatrices(m, m);
 }
 
+void transposeIfMatrixHasEqualSumOfRows(matrix m){
+    long long sumArr[10];
+    for (int i = 0; i < (m).nRows; ++i)
+        sumArr[i] = getSum(sumArr[i], (m).nCols);
+
+    if(isUnique(sumArr, (m).nRows))
+        transposeSquareMatrix(m);
+}
+
 int main() {
     matrix m = getMemMatrix(3, 3);
 

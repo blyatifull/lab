@@ -210,6 +210,22 @@ matrix mulMatrices(matrix m1, matrix m2){
     return m3;
 }
 
+long long getSum(const int *row, int sizeRow){
+    long long sum = 0;
+    for (int i = 0; i < sizeRow; ++i)
+        sum += row[i];
+
+    return sum;
+}
+
+bool isUnique(const long long *arr, int size){
+    for (int i = 0; i < size; ++i)
+        for (int j = 0; j < size; ++j) {
+            if (i != j && arr[i] == arr[j])
+                return false;
+    return true;
+}
+
 
 
 
