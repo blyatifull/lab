@@ -7,12 +7,20 @@ void swapRowsWithMinAndMaxElements(matrix m){
     swapRows(m, (maxElementPos).rowIndex, (minElementPos).rowIndex);
 }
 
+void insertionSortRowsByNonDecreasingMax(matrix m){
+    insertionSortRowsByCriteria(m, getMax);
+}
+
+void insertionSortColsByNonDecreasingMin(matrix m){
+    insertionSortColsByCriteria(m, getMin);
+}
+
 int main() {
     matrix m = getMemMatrix(3, 3);
 
     inputMatrix(m);
 
-    insertionSortRowsByCriteria(m, getMax);
+    insertionSortColsByCriteria(m, getMin);
 
     outputMatrix(m);
 

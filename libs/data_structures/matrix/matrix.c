@@ -59,7 +59,7 @@ void swapRows(matrix m, int i1, int i2){
 
 void swapColumns(matrix m, int j1, int j2){
     for (int i = 0; i < (m).nRows; ++i)
-        swap((int*) &(m).values[i][j2], (int*) &(m).values[i][j2]);
+        swap(&(m).values[i][j1], &(m).values[i][j2]);
 }
 
 bool isSquareMatrix(matrix m){
@@ -158,9 +158,9 @@ void insertionSortColsByCriteria(matrix m, int (criteria)(int *, int)) {
     for (int i = 0; i < (m).nCols; ++i) {
         int tempArr[30];
         for (int j = 0; j < (m).nRows; ++j)
-            tempArr[i] = (m).values[j][i];
+            tempArr[j] = (m).values[j][i];
 
-        criteriaArr[i] = criteria(tempArr, (m).nCols);
+        criteriaArr[i] = criteria(tempArr, (m).nRows);
     }
 
     insertionSortMatrix(criteriaArr, &m, swapColumns, (m).nCols);
@@ -176,11 +176,20 @@ void insertionSortRowsByCriteria(matrix m, int (criteria)(int *, int)){
 
 int getMax(const int *row, int sizeRow){
     int maxElement = row[0];
-    for (int i = 0; i < sizeRow; ++i)
+    for (int i = 1; i < sizeRow; ++i)
         if (maxElement < row[i])
             maxElement = row[i];
 
     return maxElement;
+}
+
+int getMin(const int *row, int sizeRow){
+    int minElement = row[0];
+    for (int i = 0; i < sizeRow; ++i)
+        if (minElement > row[i])
+            minElement = row[i];
+
+    return minElement;
 }
 
 

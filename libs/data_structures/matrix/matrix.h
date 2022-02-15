@@ -64,4 +64,6 @@ void insertionSortColsByCriteria(matrix m, int (*criteria)(int *, int));
 
 int getMax (int const *row, int sizeRow);
 
+int getMin(const int *row, int sizeRow);
+
 #endif //COURSE_MATRIX_H
