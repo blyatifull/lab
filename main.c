@@ -29,6 +29,10 @@ void transposeIfMatrixHasEqualSumOfRows(matrix m){
         transposeSquareMatrix(m);
 }
 
+bool isMutuallyInverseMatrices(matrix m1, matrix m2){
+    return isEMatrix(mulMatrices(m1, m2));
+}
+
 int main() {
     matrix m = getMemMatrix(3, 3);
 
