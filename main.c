@@ -33,6 +33,29 @@ bool isMutuallyInverseMatrices(matrix m1, matrix m2){
     return isEMatrix(mulMatrices(m1, m2));
 }
 
+/***************** 8 задача *****************/
+
+int getMaxDiagonalElement(matrix m, int iRow, int iCol){
+    int maxElement = (m).values[iRow][iCol];
+    while (iRow < (m).nRows && iCol < (m).nCols)
+        maxElement = max(maxElement, (m).values[iRow++][iCol++]);
+
+    return maxElement;
+}
+
+long long findSumOfMaxesOfPseudoDiagonal(matrix m){
+    long long sumElement = 0;
+    for (int i = 1; i < (m).nRows; ++i)
+        sumElement += getMaxDiagonalElement(m, i, 0);
+
+    for (int i = 0; i < (m).nCols; ++i)
+        sumElement += getMaxDiagonalElement(m, 0, i);
+
+    return sumElement;
+}
+
+
+
 int main() {
     matrix m = getMemMatrix(3, 3);
 

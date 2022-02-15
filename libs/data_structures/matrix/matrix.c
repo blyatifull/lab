@@ -218,15 +218,11 @@ long long getSum(const int *row, int sizeRow){
     return sum;
 }
 
-bool isUnique(const long long *arr, int size){
+bool isUnique(const long long *arr, int size) {
     for (int i = 0; i < size; ++i)
         for (int j = 0; j < size; ++j) {
             if (i != j && arr[i] == arr[j])
                 return false;
-    return true;
+            return true;
+        }
 }
-
-
-
-
-
