@@ -33,7 +33,7 @@ bool isMutuallyInverseMatrices(matrix m1, matrix m2){
     return isEMatrix(mulMatrices(m1, m2));
 }
 
-/***************** 8 задача *****************/
+/***************** 7 задача *****************/
 
 int getMaxDiagonalElement(matrix m, int iRow, int iCol){
     int maxElement = (m).values[iRow][iCol];
@@ -56,14 +56,51 @@ long long findSumOfMaxesOfPseudoDiagonal(matrix m){
 
 
 
+int getMinInArea(matrix m){
+    position leftElement = getMaxValuePos(m);
+    position rightElement = getMaxValuePos(m);
+
+    int minElement = (m).values[(leftElement).rowIndex][(leftElement).colIndex];
+    int subArr[10];
+    int sizeSubArr = 1;
+    while((leftElement).rowIndex >= 0 && (rightElement).rowIndex >= 0){
+        if ((leftElement).colIndex == -1) {
+            (leftElement).colIndex++;
+            sizeSubArr--;
+        }
+
+        if ((rightElement).colIndex == m.nCols) {
+            (rightElement).colIndex--;
+            sizeSubArr--;
+        }
+
+        int i = 0;
+        while(i < sizeSubArr){
+            subArr[i] = (m).values[(leftElement).rowIndex][(leftElement).colIndex + i];
+            i++;
+        }
+
+        minElement = getMin(subArr, sizeSubArr);
+
+        (rightElement).rowIndex--;
+        (rightElement).colIndex++;
+        (leftElement).rowIndex--;
+        (leftElement).colIndex--;
+        sizeSubArr += 2;
+    }
+
+    return minElement;
+}
+
+
 int main() {
-    matrix m = getMemMatrix(3, 3);
+    matrix m = getMemMatrix(3, 4);
 
     inputMatrix(m);
 
-    m = mulMatrices(m, m);
+    int min = getMinInArea(m);
 
-    outputMatrix(m);
+    printf("%d", min);
 
     return 0;
 }
