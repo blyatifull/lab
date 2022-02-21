@@ -142,33 +142,80 @@ void sortByDistances(matrix m){
     insertionSortRowsByCriteriaF(m, getDistance);
 }
 
-
 /********************************** 10 TASK ******************************/
 
+int cmp_long_long(const void *pa, const void *pb){
+    long long arg1 = *(const long long*)pa;
+    long long arg2 = *(const long long*)pb;
+
+    if (arg1 < arg2)
+        return -1;
+    else if(arg1 > arg2)
+        return 1;
+    else
+        return 0;
+}
+
+int countNUnique(const long long *a, int size){
+    int counterUnique = 0;
+    for (int left = -1, middle = 0, right = 1; middle < size; ++middle)
+        if (a[left] != a[middle] && a[middle] != a[right])
+            counterUnique++;
+
+    return counterUnique;
+}
+
+int countEqClassesByRowsSum(matrix m){
+    long long arrayRowSum[15];
+    for (int i = 0; i < (m).nRows; ++i) {
+        arrayRowSum[i] = getSum((m).values[i], (m).nCols);
+    }
+
+    qsort(arrayRowSum, (m).nCols, sizeof(long long), cmp_long_long);
+
+    int counterClasses = 1;
+    for (int i = 0; i < (m).nRows - 1; ++i)
+        if (arrayRowSum[i] != arrayRowSum[i + 1])
+            counterClasses++;
+
+    int counterUniqueElements = countNUnique(arrayRowSum, (m).nCols);
+
+    return counterClasses - counterUniqueElements;
+}
 
 
 /********************************** 11 TASK ******************************/
 
 int getNSpecialElement(matrix m){
-    int
+    long long sumColArray[10];
+    int colArray[10];
     for (int i = 0; i < (m).nCols; ++i) {
-
+        for (int j = 0; j < (m).nRows; ++j) {
+            colArray[i] = (m).values[j][i];
+        }
+        sumColArray[i] = getSum(colArray, (m).nRows);
     }
+
+    int counter = 0;
+    for (int i = 0; i < (m).nCols; ++i)
+        for (int j = 0; j < (m).nRows; ++j)
+            if (sumColArray[i] - (m).values[j][i] < sumColArray[i])
+            counter++;
+
+    return counter;
 }
+
+/********************************** 12 TASK ******************************/
+
 
 
 
 int main() {
-    int a[10];
-    size_t size = 6;
-    inputArray_(a, size);
+    matrix m = getMemMatrix(6, 2);
 
-    int count = 0;
-    for (int i = 0, right = 1, left = -1;  i < size; ++i, right++, left++)
-        if (a[right] != a[i] && a[left] != a[i])
-            count++;
+    inputMatrix(m);
 
-    printf("%d", count);
+    printf("%d", countEqClassesByRowsSum(m));
 
     return 0;
 }
