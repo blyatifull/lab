@@ -8,6 +8,7 @@
 #include <stdbool.h>
 #include <malloc.h>
 #include <stdlib.h>
+#include <math.h>
 
 #include "C:/Users/blyatifull/cLionProjects/course/libs/algorithms/array/array.h"
 

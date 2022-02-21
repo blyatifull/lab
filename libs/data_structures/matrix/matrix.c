@@ -71,9 +71,8 @@ bool twoMatricesEqual(matrix m1, matrix m2){
         return false;
 
     for (int i = 0; i < (m1).nRows; ++i)
-        for (int j = 0; j < (m1).nCols; ++j)
-            if ((m1).values[i][j] != (m2).values[i][j])
-                return false;
+        if(!memcmp((m1).values[i], (m2).values[i], (m1).nCols))
+            return false;
 
     return true;
 }
@@ -95,7 +94,7 @@ bool isSymmetricMatrix(matrix m){
         return false;
 
     for (int i = 0; i < (m).nRows; ++i)
-        for (int j = 0; j < (m).nCols; ++j)
+        for (int j = i + 1; j < (m).nCols; ++j)
             if ((m).values[i][j] != (m).values[j][i])
                 return false;
 
@@ -109,7 +108,7 @@ void  transposeSquareMatrix(matrix m){
     }
 
     for (int i = 0; i < (m).nRows; ++i)
-        for (int j = 0; j < (m).nCols; ++j)
+        for (int j = i + 1; j < (m).nCols; ++j)
             swap(&(m).values[i][j], &(m).values[j][i]);
 }
 
@@ -153,6 +152,14 @@ void insertionSortMatrix(int *a, matrix *m, void (f)(matrix, int, int), int rows
     }
 }
 
+void insertionSortRowsByCriteria(matrix m, int (criteria)(int *, int)){
+    int criteriaArr[30];
+    for (int i = 0; i < (m).nRows; ++i)
+        criteriaArr[i] = criteria((m).values[i], (m).nCols);
+
+    insertionSortMatrix(criteriaArr, &m, swapRows, (m).nRows);
+}
+
 void insertionSortColsByCriteria(matrix m, int (criteria)(int *, int)) {
     int criteriaArr[30];
     for (int i = 0; i < (m).nCols; ++i) {
@@ -164,14 +171,6 @@ void insertionSortColsByCriteria(matrix m, int (criteria)(int *, int)) {
     }
 
     insertionSortMatrix(criteriaArr, &m, swapColumns, (m).nCols);
-}
-
-void insertionSortRowsByCriteria(matrix m, int (criteria)(int *, int)){
-    int criteriaArr[30];
-    for (int i = 0; i < (m).nRows; ++i)
-        criteriaArr[i] = criteria((m).values[i], (m).nCols);
-
-    insertionSortMatrix(criteriaArr, &m, swapRows, (m).nRows);
 }
 
 int getMax(const int *row, int sizeRow){
