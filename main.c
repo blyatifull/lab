@@ -144,25 +144,19 @@ void sortByDistances(matrix m){
 
 /********************************** 10 TASK ******************************/
 
-int cmp_long_long(const void *pa, const void *pb){
-    long long arg1 = *(const long long*)pa;
-    long long arg2 = *(const long long*)pb;
+int compare_long_long(const void *a, const void *b) {
+    long long arg1 = *(const long long *) a;
+    long long arg2 = *(const long long *) b;
 
-    if (arg1 < arg2)
+    if (arg1 < arg2) {
         return -1;
-    else if(arg1 > arg2)
+    }
+
+    if (arg1 > arg2) {
         return 1;
-    else
-        return 0;
-}
+    }
 
-int countNUnique(const long long *a, int size){
-    int counterUnique = 0;
-    for (int left = -1, middle = 0, right = 1; middle < size; ++middle)
-        if (a[left] != a[middle] && a[middle] != a[right])
-            counterUnique++;
-
-    return counterUnique;
+    return 0;
 }
 
 int countEqClassesByRowsSum(matrix m){
@@ -171,16 +165,19 @@ int countEqClassesByRowsSum(matrix m){
         arrayRowSum[i] = getSum((m).values[i], (m).nCols);
     }
 
-    qsort(arrayRowSum, (m).nCols, sizeof(long long), cmp_long_long);
+    qsort(arrayRowSum, (m).nRows, sizeof(long long), compare_long_long);
 
-    int counterClasses = 1;
-    for (int i = 0; i < (m).nRows - 1; ++i)
-        if (arrayRowSum[i] != arrayRowSum[i + 1])
+    int counterClasses = 0;
+    for (int i = 1; i < (m).nRows; ++i) {
+        if (arrayRowSum[i] != arrayRowSum[i - 1]){
+            if (counterClasses == 0)
+                counterClasses++;
+
             counterClasses++;
+        }
+    }
 
-    int counterUniqueElements = countNUnique(arrayRowSum, (m).nCols);
-
-    return counterClasses - counterUniqueElements;
+    return counterClasses;
 }
 
 
@@ -210,12 +207,16 @@ int getNSpecialElement(matrix m){
 
 
 
+
+
+
 int main() {
     matrix m = getMemMatrix(6, 2);
-
     inputMatrix(m);
 
-    printf("%d", countEqClassesByRowsSum(m));
+    int a = countEqClassesByRowsSum(m);
+
+    printf("%d", a);
 
     return 0;
 }

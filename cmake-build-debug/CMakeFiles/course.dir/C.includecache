@@ -21,11 +21,15 @@ malloc.h
 -
 stdlib.h
 -
+math.h
+-
 C:/Users/blyatifull/cLionProjects/course/libs/algorithms/array/array.h
 -
 
 C:/Users/blyatifull/CLionProjects/course/main.c
 C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix/matrix.h
+-
+math.h
 -
 
 C:/Users/blyatifull/cLionProjects/course/libs/algorithms/array/array.h

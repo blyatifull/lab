@@ -225,3 +225,21 @@ bool isUnique(const long long *arr, int size) {
             return true;
         }
 }
+
+int countNUnique(const long long *a, int size){
+    int uniqueElements = 0;
+    for (int i = 0; i < size; ++i) {
+        bool isUnique = true;
+        for (int j = 0; j < size; ++j) {
+            if (i != j && a[i] == a[j]) {
+                isUnique = false;
+                break;
+            }
+        }
+        if (isUnique)
+            uniqueElements++;
+    }
+
+    return uniqueElements;
+}
+
