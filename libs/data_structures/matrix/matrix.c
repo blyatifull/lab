@@ -34,9 +34,20 @@ void inputMatrix(matrix m){
             scanf("%d", &(m).values[i][j]);
 }
 
+void inputMatrixF(matrixF m){
+    for (int i = 0; i < (m).nRows; ++i)
+        for (int j = 0; j < (m).nCols; ++j)
+            scanf("%f", &(m).values[i][j]);
+}
+
 void inputMatrices(matrix *ms, int nMatrices){
     for (int i = 0; i < nMatrices; ++i)
         inputMatrix(ms[i]);
+}
+
+void inputMatricesF(matrixF *ms, int nMatrices){
+    for (int i = 0; i < nMatrices; ++i)
+        inputMatrixF(ms[i]);
 }
 
 void outputMatrix(matrix m) {
@@ -48,9 +59,23 @@ void outputMatrix(matrix m) {
     }
 }
 
+void outputMatrixF(matrixF m) {
+    for (int i = 0; i < (m).nRows; ++i){
+        for (int j = 0; j < (m).nCols; ++j)
+            printf("%f ", (m).values[i][j]);
+
+        printf("\b\b\n");
+    }
+}
+
 void outputMatrices(matrix *ms, int nMatrices){
     for (int i = 0; i < nMatrices; ++i)
         outputMatrix(ms[i]);
+}
+
+void outputMatricesF(matrixF *ms, int nMatrices){
+    for (int i = 0; i < nMatrices; ++i)
+        outputMatrixF(ms[i]);
 }
 
 void swapRows(matrix m, int i1, int i2){

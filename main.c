@@ -1,6 +1,8 @@
 #include "C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix/matrix.h"
 #include <math.h>
 
+#define EPS 0.000001
+
 /********************************** 1 TASK ******************************/
 
 void swapRowsWithMinAndMaxElements(matrix m){
@@ -289,16 +291,43 @@ void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix){
         if (countZeroRows(ms[i]) == maxZeroRows)
             outputMatrix(ms[i]);
     }
-
 }
 
+/********************************** 15 TASK ******************************/
+
+float getAbsoluteMax(matrixF m){
+    float absoluteMax = fabs((m).values[0][0]);
+    for (int i = 0; i < (m).nRows; ++i) {
+        for (int j = 0; j < (m).nCols; ++j) {
+            float absValue = fabs((m).values[i][j]);
+            if (absoluteMax < absValue)
+                absoluteMax = absValue;
+        }
+    }
+
+    return absoluteMax;
+}
+
+void printMatrixWithMinNormMax(matrixF *ms, int nMatrix){
+    float minAbsoluteMax = getAbsoluteMax(ms[0]);
+    for (int i = 1; i < nMatrix; ++i) {
+        float absoluteMax = getAbsoluteMax(ms[i]);
+        if (minAbsoluteMax > absoluteMax)
+            minAbsoluteMax = absoluteMax;
+    }
+
+    for (int i = 0; i < nMatrix; ++i) {
+        if (getAbsoluteMax(ms[i]) - minAbsoluteMax < EPS)
+            outputMatrixF(ms[i]);
+    }
+}
 
 int main() {
-    matrix *ms = getMemArrayOfMatrices(5, 3, 2);
-    int nMatrices = 5;
-    inputMatrices(ms, nMatrices);
+    matrixF *ms = getMemArrayOfMatrices(3, 2, 2);
+    int nMatrices = 3;
+    inputMatricesF(ms, nMatrices);
 
-    printMatrixWithMaxZeroRows(ms, nMatrices);
+    printMatrixWithMinNormMax(ms, nMatrices);
 
     freeMemMatrices(ms, nMatrices);
 

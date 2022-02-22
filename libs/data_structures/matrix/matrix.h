@@ -18,6 +18,12 @@ typedef struct{
     int nCols;     // кол-во столбцов
 } matrix;
 
+typedef struct{
+    float **values;  // элементы матрицы
+    int nRows;     // кол-во рядов
+    int nCols;     // кол-во столбцов
+} matrixF;
+
 typedef struct position {
     int rowIndex;  // индекс строки
     int colIndex;  // индекс столбца
@@ -33,11 +39,19 @@ void freeMemMatrices(matrix *ms, int nMatrices);
 
 void inputMatrix(matrix m);
 
+void inputMatrixF(matrixF m);
+
 void inputMatrices(matrix *ms, int nMatrices);
+
+void inputMatricesF(matrixF *ms, int nMatrices);
 
 void outputMatrix(matrix m);
 
+void outputMatrixF(matrixF m);
+
 void outputMatrices(matrix *ms, int nMatrices);
+
+void outputMatricesF(matrixF *ms, int nMatrices);
 
 void swapRows(matrix m, int i1, int i2);
 
