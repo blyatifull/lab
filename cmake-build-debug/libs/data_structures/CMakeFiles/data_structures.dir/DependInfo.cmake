@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/blyatifull/CLionProjects/course/libs/data_structures/bitset/bitset.c" "C:/Users/blyatifull/CLionProjects/course/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/bitset/bitset.c.obj"
   "C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix/matrix.c" "C:/Users/blyatifull/CLionProjects/course/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix.c.obj"
+  "C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix_test/matrix_test.c" "C:/Users/blyatifull/CLionProjects/course/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/matrix_test/matrix_test.c.obj"
   "C:/Users/blyatifull/CLionProjects/course/libs/data_structures/ordered_array_set/ordered_array_set.c" "C:/Users/blyatifull/CLionProjects/course/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/ordered_array_set/ordered_array_set.c.obj"
   "C:/Users/blyatifull/CLionProjects/course/libs/data_structures/unordered_array_set/unordered_array_set.c" "C:/Users/blyatifull/CLionProjects/course/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj"
   "C:/Users/blyatifull/CLionProjects/course/libs/data_structures/vector/vector.c" "C:/Users/blyatifull/CLionProjects/course/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj"

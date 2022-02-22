@@ -75,7 +75,6 @@ int getMinInArea(matrix m){
     position rightElement = getMaxValuePos(m);
 
     int minElement = (m).values[(leftElement).rowIndex][(leftElement).colIndex];
-    int minInSubArray = (m).values[(leftElement).rowIndex][(leftElement).colIndex];
     int subArr[10];
     int sizeSubArr = 1;
     while((leftElement).rowIndex >= 0){
@@ -95,7 +94,7 @@ int getMinInArea(matrix m){
             i++;
         }
 
-        minInSubArray = getMin(subArr, sizeSubArr);
+        int minInSubArray = getMin(subArr, sizeSubArr);
         if(minElement > minInSubArray)
             minElement = minInSubArray;
 

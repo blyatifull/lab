@@ -193,6 +193,36 @@ matrix\matrix.c.s:
 	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
 .PHONY : matrix\matrix.c.s
 
+matrix_test\matrix_test.obj: matrix_test\matrix_test.c.obj
+.PHONY : matrix_test\matrix_test.obj
+
+# target to build an object file
+matrix_test\matrix_test.c.obj:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\matrix_test\matrix_test.c.obj
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : matrix_test\matrix_test.c.obj
+
+matrix_test\matrix_test.i: matrix_test\matrix_test.c.i
+.PHONY : matrix_test\matrix_test.i
+
+# target to preprocess a source file
+matrix_test\matrix_test.c.i:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\matrix_test\matrix_test.c.i
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : matrix_test\matrix_test.c.i
+
+matrix_test\matrix_test.s: matrix_test\matrix_test.c.s
+.PHONY : matrix_test\matrix_test.s
+
+# target to generate assembly for a file
+matrix_test\matrix_test.c.s:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\matrix_test\matrix_test.c.s
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : matrix_test\matrix_test.c.s
+
 ordered_array_set\ordered_array_set.obj: ordered_array_set\ordered_array_set.c.obj
 .PHONY : ordered_array_set\ordered_array_set.obj
 
@@ -358,6 +388,9 @@ help:
 	@echo ... matrix/matrix.obj
 	@echo ... matrix/matrix.i
 	@echo ... matrix/matrix.s
+	@echo ... matrix_test/matrix_test.obj
+	@echo ... matrix_test/matrix_test.i
+	@echo ... matrix_test/matrix_test.s
 	@echo ... ordered_array_set/ordered_array_set.obj
 	@echo ... ordered_array_set/ordered_array_set.i
 	@echo ... ordered_array_set/ordered_array_set.s
