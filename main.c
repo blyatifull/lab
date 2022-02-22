@@ -235,15 +235,42 @@ void swapPenultimateRow(matrix m){
 
 /********************************** 13 TASK ******************************/
 
+bool isNonDescendingSorted(const int *a, const int n){
+    for (int i = 0; i < n - 1; ++i)
+        if (a[i] > a[i + 1])
+            return false;
+
+    return true;
+}
+
+bool hasAllNonDescendingRows(matrix m){
+    for (int i = 0; i < (m).nRows; ++i)
+        if (!isNonDescendingSorted((m).values[i], (m).nRows))
+            return false;
+
+    return true;
+}
+
+int countNonDescendingRowsMatrices(matrix *ms, int nMatrix){
+    int counterSortedMatrices = 0;
+    for (int i = 0; i < nMatrix; ++i)
+        counterSortedMatrices += hasAllNonDescendingRows(ms[i]);
+
+    return counterSortedMatrices;
+}
+
 
 
 int main() {
-    matrix m = getMemMatrix(3, 3);
-    inputMatrix(m);
+    matrix *ms = getMemArrayOfMatrices(4, 2, 2);
+    int nMatrices = 4;
+    inputMatrices(ms, nMatrices);
 
-    swapPenultimateRow(m);
+    int a = countNonDescendingRowsMatrices(ms, nMatrices);
 
-    outputMatrix(m);
+    printf("%d", a);
+
+    freeMemMatrices(ms, nMatrices);
 
     return 0;
 }
