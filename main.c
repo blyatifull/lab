@@ -204,19 +204,46 @@ int getNSpecialElement(matrix m){
 
 /********************************** 12 TASK ******************************/
 
+position getLeftMin(matrix m){
+    position minElementPos = {0, 0};
+    int minValue = (m).values[0][0];
+    for (int i = 0; i < (m).nRows; ++i) {
+        for (int j = 0; j < (m).nCols; ++j) {
+            if (minValue > (m).values[i][j]){
+                minValue = (m).values[i][j];
+                (minElementPos).rowIndex = i;
+                (minElementPos).colIndex = j;
+            }
+        }
+    }
 
+    return minElementPos;
+}
 
+void swapPenultimateRow(matrix m){
+    int penultimateRow = (m).nRows - 2;
+    position leftMinPos = getLeftMin(m);
+    int colArr[10];
+    for (int i = 0; i < (m).nRows; ++i) {
+        colArr[i] = (m).values[i][(leftMinPos).colIndex];
+    }
 
+    for (int i = 0; i < (m).nCols; ++i) {
+        (m).values[penultimateRow][i] = colArr[i];
+    }
+}
+
+/********************************** 13 TASK ******************************/
 
 
 
 int main() {
-    matrix m = getMemMatrix(6, 2);
+    matrix m = getMemMatrix(3, 3);
     inputMatrix(m);
 
-    int a = countEqClassesByRowsSum(m);
+    swapPenultimateRow(m);
 
-    printf("%d", a);
+    outputMatrix(m);
 
     return 0;
 }
