@@ -96,8 +96,9 @@ bool twoMatricesEqual(matrix m1, matrix m2){
         return false;
 
     for (int i = 0; i < (m1).nRows; ++i)
-        if(!memcmp((m1).values[i], (m2).values[i], (m1).nCols))
-            return false;
+        for (int j = 0; j < (m1).nCols; ++j)
+            if ((m1).values[i][j] != (m2).values[i][j])
+                return false;
 
     return true;
 }

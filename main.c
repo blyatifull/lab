@@ -1,4 +1,4 @@
-#include "C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix/matrix.h"
+#include "C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix_test/matrix_test.h"
 #include <math.h>
 
 #define EPS 0.000001
@@ -322,13 +322,7 @@ void printMatrixWithMinNormMax(matrixF *ms, int nMatrix){
 }
 
 int main() {
-    matrixF *ms = getMemArrayOfMatrices(3, 2, 2);
-    int nMatrices = 3;
-    inputMatricesF(ms, nMatrices);
-
-    printMatrixWithMinNormMax(ms, nMatrices);
-
-    freeMemMatrices(ms, nMatrices);
+    test_matrix();
 
     return 0;
 }
