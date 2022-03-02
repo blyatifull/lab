@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix/matrix.c
-matrix.h
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix/matrix.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string_/string_.c
+string_.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string_/string_.h
 
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix/matrix.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string_/string_.h
 stdint.h
 -
 assert.h
@@ -27,10 +27,6 @@ stdlib.h
 -
 math.h
 -
-C:/Users/blyatifull/cLionProjects/course/libs/algorithms/array/array.h
--
-
-C:/Users/blyatifull/cLionProjects/course/libs/algorithms/array/array.h
-stddef.h
+ctype.h
 -
 

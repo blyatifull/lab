@@ -5,7 +5,7 @@ CMakeFiles\course.dir\libs\data_structures\ordered_array_set\ordered_array_set.c
 CMakeFiles\course.dir\libs\data_structures\ordered_array_set\ordered_array_set.c.obj: ..\libs\data_structures\ordered_array_set\ordered_array_set.c
 CMakeFiles\course.dir\libs\data_structures\ordered_array_set\ordered_array_set.c.obj: ..\libs\data_structures\ordered_array_set\ordered_array_set.h
 
-CMakeFiles\course.dir\main.c.obj: ..\libs\data_structures\matrix\matrix.h
-CMakeFiles\course.dir\main.c.obj: ..\main.c
 CMakeFiles\course.dir\main.c.obj: ..\libs\algorithms\array\array.h
+CMakeFiles\course.dir\main.c.obj: ..\libs\data_structures\string_\string_.h
+CMakeFiles\course.dir\main.c.obj: ..\main.c
 

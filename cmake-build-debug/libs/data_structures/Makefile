@@ -253,6 +253,36 @@ ordered_array_set\ordered_array_set.c.s:
 	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
 .PHONY : ordered_array_set\ordered_array_set.c.s
 
+string_\string_.obj: string_\string_.c.obj
+.PHONY : string_\string_.obj
+
+# target to build an object file
+string_\string_.c.obj:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\string_\string_.c.obj
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : string_\string_.c.obj
+
+string_\string_.i: string_\string_.c.i
+.PHONY : string_\string_.i
+
+# target to preprocess a source file
+string_\string_.c.i:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\string_\string_.c.i
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : string_\string_.c.i
+
+string_\string_.s: string_\string_.c.s
+.PHONY : string_\string_.s
+
+# target to generate assembly for a file
+string_\string_.c.s:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\string_\string_.c.s
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : string_\string_.c.s
+
 unordered_array_set\unordered_array_set.obj: unordered_array_set\unordered_array_set.c.obj
 .PHONY : unordered_array_set\unordered_array_set.obj
 
@@ -394,6 +424,9 @@ help:
 	@echo ... ordered_array_set/ordered_array_set.obj
 	@echo ... ordered_array_set/ordered_array_set.i
 	@echo ... ordered_array_set/ordered_array_set.s
+	@echo ... string_/string_.obj
+	@echo ... string_/string_.i
+	@echo ... string_/string_.s
 	@echo ... unordered_array_set/unordered_array_set.obj
 	@echo ... unordered_array_set/unordered_array_set.i
 	@echo ... unordered_array_set/unordered_array_set.s
