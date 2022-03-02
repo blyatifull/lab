@@ -121,5 +121,44 @@ void removeExtraSpaces(char *s) {
     *s = '\0';
 }
 
+/********************************************* TASK 3 *************************************************/
+
+char _stringBuffer[MAX_STRING_SIZE + 1];
+
+typedef struct WordDescriptor {
+    char *begin ;           // позиция начала слова
+    char *end ;             // позиция первого символа, после последнего символа слова
+} WordDescriptor;
+
+int getWord (char *beginSearch, WordDescriptor *word){
+    word->begin = findNonSpace_(beginSearch);
+    if (*word -> begin == '\0')
+        return 0;
+
+    word->end = findSpace_(word -> begin );
+
+    return 1;
+}
+
+void digitToStart (WordDescriptor word){
+    char *endStringBuff = copy(word.begin, word.end, _stringBuffer);
+
+    char *recPosition = copyIf(endStringBuff, _stringBuffer, word.end, isalpha);
+
+    copyIf(_stringBuffer, endStringBuff, recPosition, isdigit);
+}
+
+int getWordReverse (char *rbeginSearch, const char *rend, WordDescriptor *word){
+    word->begin = findNonSpaceReverse_(rbeginSearch, rend);
+    if (*word->begin != *rend)
+        return 0;
+
+    word->end = findNonSpaceReverse_(word->begin, rend);
+
+    return 1;
+}
+
+
+
 
 

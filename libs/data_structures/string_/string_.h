@@ -11,6 +11,8 @@
 #include <math.h>
 #include <ctype.h>
 
+#define MAX_STRING_SIZE 100
+
 // Возвращает кол-во символов (длину строки) в строке begin,
 // не учитывая символ окончания строки
 size_t strlen_ (const char *begin);
