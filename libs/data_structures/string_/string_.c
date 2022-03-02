@@ -159,6 +159,30 @@ int getWordReverse (char *rbeginSearch, const char *rend, WordDescriptor *word){
 }
 
 
+/********************************************* TASK 4 *************************************************/
 
+void replaceNumberWithSpaces(char *s){
+    char *getEndS = getEndOfString(s);
+    char *startStringBuffer = _stringBuffer;
+    char *stringBuffer = copy(s, getEndS, _stringBuffer);
+    *stringBuffer = '\0';
+
+    while (*startStringBuffer != '\0'){
+        if (isdigit(*startStringBuffer)){
+            int temp = *startStringBuffer - 48;
+            while (temp--) {
+                *s = ' ';
+                s++;
+            }
+            continue;
+        }
+
+        *s = *startStringBuffer;
+        s++;
+        startStringBuffer++;
+    }
+
+    *s = '\0';
+}
 
 
