@@ -4,10 +4,16 @@
 #include <assert.h>
 
 int main() {
-    char s[] = "111222";
-    removeAdjacentEqualLetters(s);
-
-    assert(*s == "12");
+        char s[] = "tualetnyi123 intuzist";
+        WordDescriptor word;
+        char *beginSearch = s;
+        while(getWord(beginSearch, &word)) {
+            printf("%c %c", *(word).begin, *(word).end);
+            printf("\n");
+            digitToStart(word);
+            beginSearch = (word).end;
+            puts(s);
+        }
 
     return 0;
 }

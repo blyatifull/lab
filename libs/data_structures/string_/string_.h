@@ -13,6 +13,17 @@
 
 #define MAX_STRING_SIZE 100
 
+typedef struct WordDescriptor {
+    char *begin ;           // позиция начала слова
+    char *end ;             // позиция первого символа, после последнего символа слова
+} WordDescriptor;
+
+int getWordReverse(char *rbeginSearch, const char *rend, WordDescriptor *word);
+
+int getWord (char *beginSearch, WordDescriptor *word);
+
+void digitToStart (WordDescriptor word);
+
 // Возвращает кол-во символов (длину строки) в строке begin,
 // не учитывая символ окончания строки
 size_t strlen_ (const char *begin);
@@ -31,8 +42,14 @@ char* findNonSpaceReverse_(char *rbegin, const char *rend);
 
 char* findSpaceReverse_(char *rbegin, const char *rend);
 
-//jjjj
-void removeAdjacentEqualLetters(char *s);
+int strcmp_(const char *lhs, const char *rhs);
+
+char* copy(char *beginSource, const char *endSource, char *beginDestination);
+
+char* copyIf(char *beginSource, const char *endSource, char *beginDestination, int (*f)(int));
+
+char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int));
+
 
 
 
