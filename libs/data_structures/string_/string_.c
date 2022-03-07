@@ -28,7 +28,7 @@ char* findSpace_(char *begin){
             return begin;
         begin++;
     }
-    return begin;
+    return ++begin;
 }
 
 char* findNonSpaceReverse_(char *rbegin, const char *rend){
@@ -112,12 +112,24 @@ char *getEndOfString(char *s) {
     return s;
 }
 
+int getCountWords(char *s){
+    WordDescriptor w;
+    int wordsCounter = 0;
+    while (getWord(s, &w)){
+        wordsCounter++;
+
+        s = (w).end;
+    }
+
+    return wordsCounter;
+}
+
 void inputArrayOfWords(char *s, BagOfWords *words){
     (words)->size = 0;
-
-    while (getWord(s, &(words)->words[(words)->size])){
-
-        s = (words)->words->end;
+    WordDescriptor word;
+    while (getWord(s, &word)){
+        (words)->words[(words)->size] = word;
+        s = word.end;
 
         (words)->size++;
     }
@@ -337,4 +349,28 @@ WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA (char *s, char **
 }
 
 /********************************************* TASK 12 *************************************************/
+
+bool isWordsEqual (WordDescriptor w1, WordDescriptor w2){
+    if(strcmp_((w1).begin, (w2).begin) == 0)
+        return true;
+    return false;
+}
+
+WordDescriptor getLastWordFirstStringThatIsInSecondString (char *s1, char *s2){
+    BagOfWords fwords, swords;
+    inputArrayOfWords(s1, &fwords);
+    inputArrayOfWords(s2, &swords);
+
+    WordDescriptor result;
+    for (int i = 0; i < (fwords).size; ++i) {
+        for (int j = 0; j < (swords).size; ++j) {
+            if (isWordsEqual((fwords).words[i], (swords).words[j])) {
+                result = (fwords).words[i];
+            }
+        }
+    }
+    return result;
+}
+
+/********************************************* TASK 13 *************************************************/
 
