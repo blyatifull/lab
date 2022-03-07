@@ -18,6 +18,18 @@ typedef struct WordDescriptor {
     char *end ;             // позиция первого символа, после последнего символа слова
 } WordDescriptor;
 
+typedef struct BagOfWords{
+    WordDescriptor words[1000];
+    size_t size;
+} BagOfWords;
+
+typedef enum WordBeforeFirstWordWithAReturnCode {
+    FIRST_WORD_WITH_A,
+    NOT_FOUND_A_WORD_WITH_A,
+    WORD_FOUND,
+    EMPTY_STRING
+}WordBeforeFirstWordWithAReturnCode;
+
 int getWordReverse(char *rbeginSearch, const char *rend, WordDescriptor *word);
 
 int getWord (char *beginSearch, WordDescriptor *word);

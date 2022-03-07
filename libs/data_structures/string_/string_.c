@@ -88,7 +88,22 @@ char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDesti
     return beginDestination;
 }
 
-/********************************************* TASK 1 *************************************************/
+int wordcmp(WordDescriptor w1, WordDescriptor w2) {
+    while (w1.begin != w1.end && w2.begin != w2.end && *w1.begin == *w2.begin) {
+        w1.begin++;
+        w2.begin++;
+    }
+
+    if (w1.begin == w1.end && w2.begin == w2.end) {
+        return 0;
+    } else if (w1.begin == w1.end && w2.begin != w2.end) {
+        return -(*w2.begin);
+    } else if (w1.begin != w1.end && w2.begin == w2.end) {
+        return *w1.begin;
+    } else {
+        return *w1.begin - *w2.begin;
+    }
+}
 
 char *getEndOfString(char *s) {
     while (*s != '\0')
@@ -96,6 +111,21 @@ char *getEndOfString(char *s) {
 
     return s;
 }
+
+void inputArrayOfWords(char *s, BagOfWords *words){
+    (words)->size = 0;
+
+    while (getWord(s, &(words)->words[(words)->size])){
+
+        s = (words)->words->end;
+
+        (words)->size++;
+    }
+}
+
+/********************************************* TASK 1 *************************************************/
+
+
 
 void removeNonLetters(char *s) {
     char *endSource = getEndOfString(s);
@@ -130,7 +160,7 @@ int getWord (char *beginSearch, WordDescriptor *word){
     if (*(word)->begin == '\0')
         return 0;
 
-    (word)->end = findSpace_(word->begin );
+    (word)->end = findSpace_(word->begin);
 
     return 1;
 }
@@ -224,6 +254,8 @@ bool isSortedByLexicographicDictionary (char *s){
 
 /********************************************* TASK 7 *************************************************/
 
+
+
 /********************************************* TASK 8 *************************************************/
 
 
@@ -273,7 +305,36 @@ char* getAlternatingWordsInString(char *s1, char *s2){
         }
     }
 
+    *buffer = '\0';
+
     return buffer;
 }
 
 /********************************************* TASK 10 *************************************************/
+
+char* reverseString (char *s){
+    BagOfWords words;
+    inputArrayOfWords(s, &words);
+
+    char *result;
+    while ((words).size) {
+        result = copy((words).words[words.size - 1].begin, (words).words[words.size - 1].end - 1, result);
+
+        *result = ' ';
+
+        (words).size--;
+    }
+
+    *result = '\0';
+
+    return result;
+}
+
+/********************************************* TASK 11 *************************************************/
+
+WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA (char *s, char **beginWordBefore, char **endWordBefore){
+
+}
+
+/********************************************* TASK 12 *************************************************/
+
