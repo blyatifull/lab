@@ -432,3 +432,23 @@ WordDescriptor getLastWordFirstStringThatIsInSecondString_ (char *s1, char *s2){
     return result;
 }
 
+/********************************************* TASK 17 *************************************************/
+
+void deleteAllPolyWords(char *s){
+    BagOfWords words;
+    inputArrayOfWords(s, &words);
+
+    char *buffer = s;
+    for (int i = 0; i < (words).size; ++i) {
+        if (!isPoly((words).words[i])) {
+            copy((words).words[i].begin, (words).words[i].end, buffer);
+            buffer++;
+        }
+    }
+    *buffer = '\0';
+
+    copy(buffer, getEndOfString(buffer), s);
+}
+
+/********************************************* TASK 18 *************************************************/
+
