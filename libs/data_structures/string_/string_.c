@@ -344,8 +344,43 @@ char* reverseString (char *s){
 
 /********************************************* TASK 11 *************************************************/
 
-void printWordBeforeFirstWordWithA (char *s){
+char* findSymbolA (char *begin, const char *end){
+    while (begin != end && *begin != 'a' && *begin != 'A')
+        begin++;
 
+    return begin;
+}
+
+void printWordBeforeFirstWordWithA (char *s){
+    if (getCountWords(s) == 0){
+        printf(EMPTY_STRING);
+    }
+
+    char *end = getEndOfString(s);
+    if (findSymbolA(s, end) == end) {
+        printf(NOT_FOUND_A_WORD_WITH_A);
+    }
+
+    WordDescriptor backWord;
+    getWord(s, &backWord);
+    char *nextWord = findSymbolA((backWord).begin, (backWord).end);
+    if (*nextWord != 'a' && *nextWord != 'A')
+        printf(FIRST_WORD_WITH_A);
+
+    s = (backWord).end;
+    WordDescriptor readWord;
+    while (getWord(s, &readWord)){
+        nextWord = findSymbolA((readWord).begin, (readWord).end);
+        if (*nextWord == 'a' || *nextWord == 'A'){
+            char *result = s;
+            copy((readWord).begin, (readWord).end, result);
+            printf("%s", result);
+        }
+
+        backWord = readWord;
+
+        s = (readWord).end;
+    }
 }
 
 /********************************************* TASK 12 *************************************************/
