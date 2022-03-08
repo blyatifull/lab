@@ -62,6 +62,8 @@ char* copyIf(char *beginSource, const char *endSource, char *beginDestination, i
 
 char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int));
 
+bool isWordsEqual (WordDescriptor w1, WordDescriptor w2);
+
 
 
 
