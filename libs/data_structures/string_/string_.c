@@ -81,19 +81,19 @@ char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDesti
 }
 
 int wordcmp(WordDescriptor w1, WordDescriptor w2) {
-    while (w1.begin != w1.end && w2.begin != w2.end && *w1.begin == *w2.begin) {
-        w1.begin++;
-        w2.begin++;
+    while ((w1).begin != (w1).end && (w2).begin != (w2).end && *(w1).begin == *(w2).begin) {
+        (w1).begin++;
+        (w2).begin++;
     }
 
-    if (w1.begin == w1.end && w2.begin == w2.end) {
+    if ((w1).begin == (w1).end && (w2).begin == (w2).end) {
         return 0;
-    } else if (w1.begin == w1.end && w2.begin != w2.end) {
-        return -(*w2.begin);
-    } else if (w1.begin != w1.end && w2.begin == w2.end) {
-        return *w1.begin;
+    } else if ((w1).begin == (w1).end && (w2).begin != (w2).end) {
+        return -(*(w2).begin);
+    } else if ((w1).begin != (w1).end && (w2).begin == (w2).end) {
+        return *(w1).begin;
     } else {
-        return *w1.begin - *w2.begin;
+        return *(w1).begin - *(w2).begin;
     }
 }
 
@@ -425,6 +425,26 @@ bool isSameWords (char *s){
 }
 
 /********************************************* TASK 14 *************************************************/
+
+bool task14 (char *s) {
+    copy(s, getEndOfString(s), _stringBuffer);
+
+    BagOfWords words;
+    inputArrayOfWords(_stringBuffer, &words);
+
+    for (int i = 0; i < (words).size; ++i) {
+        qsort((words).words[i].begin, strlen_((words).words[i].begin), sizeof(BagOfWords), wordcmp);
+    }
+
+    for (int i = 0; i < (words).size; ++i) {
+        for (int j = i + 1; j < (words).size; ++j) {
+            if (isWordsEqual((words).words[i], (words).words[j]))
+                return true;
+        }
+    }
+
+    return false;
+}
 
 /********************************************* TASK 15 *************************************************/
 
