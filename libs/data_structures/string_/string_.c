@@ -396,6 +396,24 @@ bool isSameWords (char *s){
 
 /********************************************* TASK 15 *************************************************/
 
+void* removeAllWordsSimilarToTheLastWord(char *s){
+    copy(s, getEndOfString(s), _stringBuffer);
+    BagOfWords words;
+    inputArrayOfWords(_stringBuffer, &words);
+    char *result = s;
+    for (int i = 0; i < (words).size - 1; ++i) {
+        if (!isWordsEqual((words).words[i], (words).words[(words).size - 1]))
+            copy((words).words[i].begin, (words).words[i].end - 1, result);
+
+        *result = ' ';
+        result++;
+    }
+
+    *result = '\0';
+
+    return result;
+}
+
 /********************************************* TASK 16 *************************************************/
 
 WordDescriptor getLastWordFirstStringThatIsInSecondString_ (char *s1, char *s2){
