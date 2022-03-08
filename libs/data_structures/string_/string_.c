@@ -330,7 +330,7 @@ char* reverseString (char *s){
 
     char *result;
     while ((words).size) {
-        result = copy((words).words[words.size - 1].begin, (words).words[words.size - 1].end - 1, result);
+        result = copy((words).words[(words).size - 1].begin, (words).words[(words).size - 1].end - 1, result);
 
         *result = ' ';
 
@@ -365,7 +365,7 @@ WordDescriptor getLastWordFirstStringThatIsInSecondString (char *s1, char *s2){
     for (int i = 0; i < (fwords).size; ++i) {
         for (int j = 0; j < (swords).size; ++j) {
             if (isWordsEqual((fwords).words[i], (swords).words[j])) {
-                result = (fwords).words[i];
+                result = ((fwords).words[i]);
             }
         }
     }
@@ -373,4 +373,19 @@ WordDescriptor getLastWordFirstStringThatIsInSecondString (char *s1, char *s2){
 }
 
 /********************************************* TASK 13 *************************************************/
+
+bool isSameWords (char *s){
+    BagOfWords words;
+    inputArrayOfWords(s, &words);
+
+    for (int i = 0; i < (words).size; ++i) {
+        for (int j = 0; j < (words).size; ++j) {
+            if (i != j && isWordsEqual(((words).words[i]), (words).words[j])) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
 
