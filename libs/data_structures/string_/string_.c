@@ -23,7 +23,7 @@ char* findNonSpace_(char *begin){
 
 char* findSpace_(char *begin){
     while (*begin != '\0'){
-        if (isspace(*begin) && *begin == ',')
+        if (isspace(*begin) || *begin == ',')
             return begin;
         begin++;
     }
@@ -221,18 +221,26 @@ void replace (char *source, char *w1, char *w2) {
     WordDescriptor word1 = {w1, w1 + w1Size};
     WordDescriptor word2 = {w2, w2 + w2Size};
 
-    char *readPtr, *recPtr;
-    if (w1Size >= w2Size){
-        readPtr = source;
-        recPtr = source;
-        } else {
-        copy (source, getEndOfString(source), _stringBuffer);
-        readPtr = _stringBuffer;
-        recPtr = source;
+    char *startStringBuffer;
+    if (w1Size >= w2Size)
+        startStringBuffer = source;
+    else {
+        copy(source, getEndOfString(source), _stringBuffer);
+        startStringBuffer = source;
     }
 
+    WordDescriptor readWord;
+    while (getWord(source, &readWord)) {
+        if (isWordsEqual(word1, readWord) != 0)
+            startStringBuffer = copy((word2).begin, (word2).end, startStringBuffer);
+        else
+            startStringBuffer = copy((readWord).begin, (readWord).end, startStringBuffer);
 
+        *startStringBuffer++ = ' ';
+        source = readWord.end;
+    }
 
+    *startStringBuffer = '\0';
 }
 
 /********************************************* TASK 6 *************************************************/
@@ -264,8 +272,10 @@ bool isSortedByLexicographicDictionary (char *s){
 
 bool isPoly(WordDescriptor w){
     while ((w).end != (w).begin)
-        if (*(w).end++ != *(w).begin++)
+        if (*(w).end - 1 != *(w).begin) {
             return false;
+        }
+    (w).end--; (w).begin++;
 
     return true;
 }
@@ -276,7 +286,7 @@ int getCountPoly(char *s){
     while (getWord(s, &w)){
         polyCounter += isPoly(w);
 
-        s = (w).end;
+        s = (w).end + 1;
     }
 
     return polyCounter;

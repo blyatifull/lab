@@ -30,13 +30,13 @@ math.h
 ctype.h
 -
 
-C:/Users/blyatifull/CLionProjects/course/main.c
-libs/data_structures/string_/string_.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string__test/string__test.h
 C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string_/string_.h
+-
+
+C:/Users/blyatifull/CLionProjects/course/main.c
+libs/data_structures/string__test/string__test.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string__test/string__test.h
 libs/algorithms/array/array.h
 C:/Users/blyatifull/CLionProjects/course/libs/algorithms/array/array.h
-math.h
--
-assert.h
--
 

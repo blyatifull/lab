@@ -62,7 +62,61 @@ char* copyIf(char *beginSource, const char *endSource, char *beginDestination, i
 
 char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int));
 
+// 1
+void removeNonLetters(char *s);
+
+// 2
+void removeExtraSpaces(char *s);
+
+// 3
+int getWord (char *beginSearch, WordDescriptor *word);
+
+void digitToStart (WordDescriptor word);
+
+int getWordReverse(char *rbeginSearch, const char *rend, WordDescriptor *word);
+
+// 4
+void replaceNumberWithSpaces(char *s);
+
+// 5
+void replace (char *source, char *w1, char *w2);
+
+// 6
+bool isSortedByLexicographicDictionary (char *s);
+
+// 8
+bool isPoly(WordDescriptor w);
+
+int getCountPoly(char *s);
+
+// 9
+char* getAlternatingWordsInString(char *s1, char *s2);
+
+// 10
+char* reverseString (char *s);
+
+// 11
+
+// 12
+WordDescriptor getLastWordFirstStringThatIsInSecondString (char *s1, char *s2);
+
 bool isWordsEqual (WordDescriptor w1, WordDescriptor w2);
+
+// 13
+bool isSameWords (char *s);
+
+// 15
+void* removeAllWordsSimilarToTheLastWord(char *s);
+
+// 16
+WordDescriptor getLastWordFirstStringThatIsInSecondString_ (char *s1, char *s2);
+
+// 17
+void deleteAllPolyWords(char *s);
+
+// 18
+char* task18 (char *s1, char *s2);
+
 
 
 
