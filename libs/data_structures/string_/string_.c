@@ -210,9 +210,10 @@ void replaceNumberWithSpaces(char *s){
     while (*startStringBuffer != '\0'){
         if (isdigit(*startStringBuffer)){
             int temp = *startStringBuffer - 48;
-            while (temp--) {
+            while (temp) {
                 *s = ' ';
-                s++;
+
+                temp--;
             }
             continue;
         }
@@ -305,6 +306,7 @@ char* getAlternatingWordsInString(char *s1, char *s2){
         if (isW1Found){
             buffer = copy((word1).begin, (word1).end, buffer);
             *buffer = ' ';
+            buffer++;
 
             beginSearch1 = (word1).end;
         }
@@ -312,6 +314,7 @@ char* getAlternatingWordsInString(char *s1, char *s2){
         if (isW2Found){
             buffer = copy((word2).begin, (word2).end, buffer);
             *buffer = ' ';
+            buffer++;
 
             beginSearch2 = (word2).end;
         }
@@ -325,26 +328,26 @@ char* getAlternatingWordsInString(char *s1, char *s2){
 /********************************************* TASK 10 *************************************************/
 
 char* reverseString (char *s){
+    copy(s, getEndOfString(s), _stringBuffer);
+
     BagOfWords words;
-    inputArrayOfWords(s, &words);
+    inputArrayOfWords(_stringBuffer, &words);
 
-    char *result;
-    while ((words).size) {
-        result = copy((words).words[(words).size - 1].begin, (words).words[(words).size - 1].end - 1, result);
-
+    char *result = s;
+    while ((words).size--) {
+        result = copy((words).words[(words).size].begin, (words).words[(words).size].end, result);
         *result = ' ';
-
-        (words).size--;
+        result++;
     }
 
-    *result = '\0';
+    *(result - 1)= '\0';
 
     return result;
 }
 
 /********************************************* TASK 11 *************************************************/
 
-WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA (char *s, char **beginWordBefore, char **endWordBefore){
+void printWordBeforeFirstWordWithA (char *s){
 
 }
 
@@ -387,5 +390,27 @@ bool isSameWords (char *s){
     }
 
     return false;
+}
+
+/********************************************* TASK 14 *************************************************/
+
+/********************************************* TASK 15 *************************************************/
+
+/********************************************* TASK 16 *************************************************/
+
+WordDescriptor getLastWordFirstStringThatIsInSecondString_ (char *s1, char *s2){
+    BagOfWords fwords, swords;
+    inputArrayOfWords(s1, &fwords);
+    inputArrayOfWords(s2, &swords);
+
+    WordDescriptor result;
+    for (int i = 0; i < (fwords).size; ++i) {
+        for (int j = 0; j < (swords).size; ++j) {
+            if (isWordsEqual((fwords).words[i], (swords).words[j])) {
+                result = ((fwords).words[i]);
+            }
+        }
+    }
+    return result;
 }
 
