@@ -263,9 +263,6 @@ bool isSortedByLexicographicDictionary (char *s){
 
 
 bool isPoly(WordDescriptor w){
-    if (((w).end - (w).begin) % 2)
-        return false;
-
     while ((w).end != (w).begin)
         if (*(w).end++ != *(w).begin++)
             return false;
@@ -415,7 +412,7 @@ WordDescriptor getLastWordFirstStringThatIsInSecondString_ (char *s1, char *s2){
     for (int i = 0; i < (fwords).size; ++i) {
         for (int j = 0; j < (swords).size; ++j) {
             if (isWordsEqual((fwords).words[i], (swords).words[j])) {
-                result = ((fwords).words[i]);
+                result = (fwords).words[i];
             }
         }
     }
@@ -442,3 +439,33 @@ void deleteAllPolyWords(char *s){
 
 /********************************************* TASK 18 *************************************************/
 
+char* task18 (char *s1, char *s2){
+    BagOfWords w1, w2;
+    inputArrayOfWords(s1, &w1);
+    inputArrayOfWords(s2, &w2);
+
+    char *result = s1;
+    if ((w1).size < (w2).size) {
+        copy(s1, getEndOfString(s1), result);
+        for (size_t i = (w1).size; i < (w2).size; ++i) {
+            copy((w2).words[i].begin, (w2).words[i].end - 1, result);
+
+            *result = '0';
+            result++;
+        }
+    } else {
+        copy(s2, getEndOfString(s2), result);
+        for (size_t i = (w2).size; i < (w1).size; ++i) {
+            copy((w1).words[i].begin, (w1).words[i].end - 1, result);
+
+            *result = '0';
+            result++;
+        }
+    }
+
+    *result = '\0';
+
+    return result;
+}
+
+/********************************************* TASK 19 *************************************************/
