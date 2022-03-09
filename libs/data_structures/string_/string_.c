@@ -265,7 +265,18 @@ bool isSortedByLexicographicDictionary (char *s){
 
 /********************************************* TASK 7 *************************************************/
 
+void printWordsRevers(char *s){
+    BagOfWords w;
+    inputArrayOfWords(s, &w);
 
+    char *temp = s;
+    for (size_t i = (w).size - 1; i > 0; i--) {
+        temp = copy((w).words[i].begin, (w).words[i].end, temp);
+        *temp = '\0';
+
+        printf("%s", temp);
+    }
+}
 
 /********************************************* TASK 8 *************************************************/
 
