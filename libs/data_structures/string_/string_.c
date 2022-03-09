@@ -534,3 +534,12 @@ char* task18 (char *s1, char *s2){
 }
 
 /********************************************* TASK 19 *************************************************/
+
+bool isAllSymbolsInString (char *s1, const char *s2){
+    while (*s2 != '\0'){
+        char *end = getEndOfString(s1);
+        if (*find_(s1, end, *s2) == *end)
+            return false;
+    }
+    return true;
+}
