@@ -4,6 +4,10 @@
 libs\data_structures\CMakeFiles\data_structures.dir\bitset\bitset.c.obj: ..\libs\data_structures\bitset\bitset.c
 libs\data_structures\CMakeFiles\data_structures.dir\bitset\bitset.c.obj: ..\libs\data_structures\bitset\bitset.h
 
+libs\data_structures\CMakeFiles\data_structures.dir\dismath\dismath.c.obj: ..\libs\data_structures\dismath\dismath.c
+libs\data_structures\CMakeFiles\data_structures.dir\dismath\dismath.c.obj: ..\libs\data_structures\dismath\dismath.h
+libs\data_structures\CMakeFiles\data_structures.dir\dismath\dismath.c.obj: ..\libs\algorithms\array\array.h
+
 libs\data_structures\CMakeFiles\data_structures.dir\matrix\matrix.c.obj: ..\libs\data_structures\matrix\matrix.c
 libs\data_structures\CMakeFiles\data_structures.dir\matrix\matrix.c.obj: ..\libs\data_structures\matrix\matrix.h
 libs\data_structures\CMakeFiles\data_structures.dir\matrix\matrix.c.obj: ..\libs\algorithms\array\array.h
@@ -17,12 +21,20 @@ libs\data_structures\CMakeFiles\data_structures.dir\ordered_array_set\ordered_ar
 libs\data_structures\CMakeFiles\data_structures.dir\ordered_array_set\ordered_array_set.c.obj: ..\libs\data_structures\ordered_array_set\ordered_array_set.c
 libs\data_structures\CMakeFiles\data_structures.dir\ordered_array_set\ordered_array_set.c.obj: ..\libs\data_structures\ordered_array_set\ordered_array_set.h
 
+libs\data_structures\CMakeFiles\data_structures.dir\sort\sort.c.obj: ..\libs\data_structures\sort\sort.c
+libs\data_structures\CMakeFiles\data_structures.dir\sort\sort.c.obj: ..\libs\data_structures\sort\sort.h
+
 libs\data_structures\CMakeFiles\data_structures.dir\string_\string_.c.obj: ..\libs\data_structures\string_\string_.c
 libs\data_structures\CMakeFiles\data_structures.dir\string_\string_.c.obj: ..\libs\data_structures\string_\string_.h
 
 libs\data_structures\CMakeFiles\data_structures.dir\string__test\string__test.c.obj: ..\libs\data_structures\string_\string_.h
 libs\data_structures\CMakeFiles\data_structures.dir\string__test\string__test.c.obj: ..\libs\data_structures\string__test\string__test.c
 libs\data_structures\CMakeFiles\data_structures.dir\string__test\string__test.c.obj: ..\libs\data_structures\string__test\string__test.h
+
+libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.obj: ..\libs\data_structures\sort\sort.h
+libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.obj: ..\libs\data_structures\time_test\time_test.c
+libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.obj: ..\libs\data_structures\time_test\time_test.h
+libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.obj: ..\libs\algorithms\array\array.h
 
 libs\data_structures\CMakeFiles\data_structures.dir\unordered_array_set\unordered_array_set.c.obj: ..\libs\algorithms\array\array.h
 libs\data_structures\CMakeFiles\data_structures.dir\unordered_array_set\unordered_array_set.c.obj: ..\libs\data_structures\unordered_array_set\unordered_array_set.c

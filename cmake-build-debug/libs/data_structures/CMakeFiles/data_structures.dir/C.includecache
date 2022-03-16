@@ -6,27 +6,33 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string_/string_.c
-string_.h
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string_/string_.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/sort/sort.c
+sort.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/sort/sort.h
 
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string_/string_.h
-stdint.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/sort/sort.h
+malloc.h
 -
-assert.h
--
-memory.h
+
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/time_test/time_test.c
+time_test.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/time_test/time_test.h
+
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/time_test/time_test.h
+stdlib.h
 -
 stdio.h
 -
 stdbool.h
 -
-malloc.h
+time.h
 -
-stdlib.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/sort/sort.h
 -
-math.h
+C:/Users/blyatifull/cLionProjects/course/libs/algorithms/array/array.h
 -
-ctype.h
+
+C:/Users/blyatifull/cLionProjects/course/libs/algorithms/array/array.h
+stddef.h
 -
 

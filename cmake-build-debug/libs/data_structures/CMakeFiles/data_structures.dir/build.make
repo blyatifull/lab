@@ -305,6 +305,81 @@ libs\data_structures\CMakeFiles\data_structures.dir\string__test\string__test.c.
 <<
 	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
 
+libs\data_structures\CMakeFiles\data_structures.dir\sort\sort.c.obj: libs\data_structures\CMakeFiles\data_structures.dir\flags.make
+libs\data_structures\CMakeFiles\data_structures.dir\sort\sort.c.obj: ..\libs\data_structures\sort\sort.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object libs/data_structures/CMakeFiles/data_structures.dir/sort/sort.c.obj"
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+	C:\PROGRA~2\MIB055~1\2019\PROFES~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\data_structures.dir\sort\sort.c.obj /FdCMakeFiles\data_structures.dir\data_structures.pdb /FS -c C:\Users\blyatifull\CLionProjects\course\libs\data_structures\sort\sort.c
+<<
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+
+libs\data_structures\CMakeFiles\data_structures.dir\sort\sort.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/data_structures.dir/sort/sort.c.i"
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+	C:\PROGRA~2\MIB055~1\2019\PROFES~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe > CMakeFiles\data_structures.dir\sort\sort.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\blyatifull\CLionProjects\course\libs\data_structures\sort\sort.c
+<<
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+
+libs\data_structures\CMakeFiles\data_structures.dir\sort\sort.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structures.dir/sort/sort.c.s"
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+	C:\PROGRA~2\MIB055~1\2019\PROFES~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\data_structures.dir\sort\sort.c.s /c C:\Users\blyatifull\CLionProjects\course\libs\data_structures\sort\sort.c
+<<
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+
+libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.obj: libs\data_structures\CMakeFiles\data_structures.dir\flags.make
+libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.obj: ..\libs\data_structures\time_test\time_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object libs/data_structures/CMakeFiles/data_structures.dir/time_test/time_test.c.obj"
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+	C:\PROGRA~2\MIB055~1\2019\PROFES~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\data_structures.dir\time_test\time_test.c.obj /FdCMakeFiles\data_structures.dir\data_structures.pdb /FS -c C:\Users\blyatifull\CLionProjects\course\libs\data_structures\time_test\time_test.c
+<<
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+
+libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/data_structures.dir/time_test/time_test.c.i"
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+	C:\PROGRA~2\MIB055~1\2019\PROFES~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe > CMakeFiles\data_structures.dir\time_test\time_test.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\blyatifull\CLionProjects\course\libs\data_structures\time_test\time_test.c
+<<
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+
+libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structures.dir/time_test/time_test.c.s"
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+	C:\PROGRA~2\MIB055~1\2019\PROFES~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\data_structures.dir\time_test\time_test.c.s /c C:\Users\blyatifull\CLionProjects\course\libs\data_structures\time_test\time_test.c
+<<
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+
+libs\data_structures\CMakeFiles\data_structures.dir\dismath\dismath.c.obj: libs\data_structures\CMakeFiles\data_structures.dir\flags.make
+libs\data_structures\CMakeFiles\data_structures.dir\dismath\dismath.c.obj: ..\libs\data_structures\dismath\dismath.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object libs/data_structures/CMakeFiles/data_structures.dir/dismath/dismath.c.obj"
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+	C:\PROGRA~2\MIB055~1\2019\PROFES~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\data_structures.dir\dismath\dismath.c.obj /FdCMakeFiles\data_structures.dir\data_structures.pdb /FS -c C:\Users\blyatifull\CLionProjects\course\libs\data_structures\dismath\dismath.c
+<<
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+
+libs\data_structures\CMakeFiles\data_structures.dir\dismath\dismath.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/data_structures.dir/dismath/dismath.c.i"
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+	C:\PROGRA~2\MIB055~1\2019\PROFES~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe > CMakeFiles\data_structures.dir\dismath\dismath.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\blyatifull\CLionProjects\course\libs\data_structures\dismath\dismath.c
+<<
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+
+libs\data_structures\CMakeFiles\data_structures.dir\dismath\dismath.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structures.dir/dismath/dismath.c.s"
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+	C:\PROGRA~2\MIB055~1\2019\PROFES~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\data_structures.dir\dismath\dismath.c.s /c C:\Users\blyatifull\CLionProjects\course\libs\data_structures\dismath\dismath.c
+<<
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+
 # Object files for target data_structures
 data_structures_OBJECTS = \
 "CMakeFiles\data_structures.dir\bitset\bitset.c.obj" \
@@ -316,7 +391,10 @@ data_structures_OBJECTS = \
 "CMakeFiles\data_structures.dir\matrix\matrix.c.obj" \
 "CMakeFiles\data_structures.dir\matrix_test\matrix_test.c.obj" \
 "CMakeFiles\data_structures.dir\string_\string_.c.obj" \
-"CMakeFiles\data_structures.dir\string__test\string__test.c.obj"
+"CMakeFiles\data_structures.dir\string__test\string__test.c.obj" \
+"CMakeFiles\data_structures.dir\sort\sort.c.obj" \
+"CMakeFiles\data_structures.dir\time_test\time_test.c.obj" \
+"CMakeFiles\data_structures.dir\dismath\dismath.c.obj"
 
 # External object files for target data_structures
 data_structures_EXTERNAL_OBJECTS =
@@ -331,9 +409,12 @@ libs\data_structures\data_structures.lib: libs\data_structures\CMakeFiles\data_s
 libs\data_structures\data_structures.lib: libs\data_structures\CMakeFiles\data_structures.dir\matrix_test\matrix_test.c.obj
 libs\data_structures\data_structures.lib: libs\data_structures\CMakeFiles\data_structures.dir\string_\string_.c.obj
 libs\data_structures\data_structures.lib: libs\data_structures\CMakeFiles\data_structures.dir\string__test\string__test.c.obj
+libs\data_structures\data_structures.lib: libs\data_structures\CMakeFiles\data_structures.dir\sort\sort.c.obj
+libs\data_structures\data_structures.lib: libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.obj
+libs\data_structures\data_structures.lib: libs\data_structures\CMakeFiles\data_structures.dir\dismath\dismath.c.obj
 libs\data_structures\data_structures.lib: libs\data_structures\CMakeFiles\data_structures.dir\build.make
 libs\data_structures\data_structures.lib: libs\data_structures\CMakeFiles\data_structures.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C static library data_structures.lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C static library data_structures.lib"
 	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
 	$(CMAKE_COMMAND) -P CMakeFiles\data_structures.dir\cmake_clean_target.cmake
 	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug

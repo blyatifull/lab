@@ -1,7 +1,6 @@
 #include "ordered_array_set.h"
 
-int compare_ints2(const void *a, const void *b)
-{
+int compare_ints2(const void *a, const void *b) {
     int arg1 = *(const int *) a;
     int arg2 = *(const int *) b;
 

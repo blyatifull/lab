@@ -188,6 +188,12 @@
 		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/bitset/bitset.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/dismath/dismath.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/dismath/dismath.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/matrix/matrix.c">
 			<Option target="data_structures"/>
 		</Unit>
@@ -208,6 +214,12 @@
 			<Option target="course"/>
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/sort/sort.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/sort/sort.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string_/string_.c">
 			<Option target="data_structures"/>
 		</Unit>
@@ -218,6 +230,12 @@
 			<Option target="data_structures"/>
 		</Unit>
 		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string__test/string__test.h">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/time_test/time_test.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/time_test/time_test.h">
 			<Option target="data_structures"/>
 		</Unit>
 		<Unit filename="C:/Users/blyatifull/CLionProjects/course/libs/data_structures/unordered_array_set/unordered_array_set.c">

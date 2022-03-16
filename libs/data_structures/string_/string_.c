@@ -14,35 +14,31 @@ char* find_(char *begin, char *end, int ch){
 }
 
 char* findNonSpace_(char *begin){
-    while (*begin != '\0') {
-        if (!isspace(*begin))
-            return begin;
+    while (!isspace(*begin) && *begin != '\0') {
         begin++;
     }
+    return begin;
 }
 
 char* findSpace_(char *begin){
-    while (*begin != '\0'){
-        if (isspace(*begin) || *begin == ',')
-            return begin;
+    while (*begin != '\0' && (isspace(*begin) || *begin == ',')){
         begin++;
     }
+    return begin;
 }
 
 char* findNonSpaceReverse_(char *rbegin, const char *rend){
-    while (rbegin != rend){
-        if (!isspace(*rbegin))
-            return rbegin;
+    while (rbegin != rend && !isspace(*rbegin)){
         rbegin--;
     }
+    return rbegin;
 }
 
 char* findSpaceReverse_(char *rbegin, const char *rend){
-    while (rbegin != rend){
-        if (isspace(*rbegin))
-            return rbegin;
+    while (rbegin != rend && isspace(*rbegin)){
         rbegin--;
     }
+    return rbegin;
 }
 
 int strcmp_(const char *lhs, const char *rhs){

@@ -3,18 +3,18 @@
 #include <assert.h>
 #include "array.h"
 
-void swap(int *a, int *b) {
+void swap_(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-void inputArray_(int *const a, const size_t n) {
+void inputArray_(int *const a, size_t n) {
     for (size_t i = 0; i < n; i++)
         scanf("%d", &a[i]);
 }
 
-void outputArray_(const int *const a, const size_t n) {
+void outputArray_(const int *const a, size_t n) {
     for (size_t i = 0; i < n; i++)
         printf("%d ", a[i]);
     printf("\n");
@@ -40,7 +40,7 @@ void insert_(int *const a, size_t *const n, const size_t pos,
     }
 }
 
-void deleteByPosSaveOrder_(int *a, size_t *n, const size_t pos) {
+void deleteByPosSaveOrder_(int *a, size_t *n, size_t pos) {
     for (size_t i = pos + 1; i < *n; i++)
         a[i] = a[i + 1];
     (*n)--;
@@ -51,7 +51,7 @@ void deleteByPosUnsaveOrder_(int *a, size_t *n, size_t pos) {
     (*n)--;
 }
 
-size_t linearSearch_(const int *a, const size_t n, int x) {
+size_t linearSearch_(const int *a, size_t n, int x) {
     for (size_t i = 0; i < n; i++)
         if (a[i] == x)
             return i;

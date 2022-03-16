@@ -6,37 +6,29 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/blyatifull/CLionProjects/course/libs/algorithms/array/array.h
-stddef.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/sort/sort.h
+malloc.h
 -
 
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string_/string_.h
-stdint.h
--
-assert.h
--
-memory.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/time_test/time_test.h
+stdlib.h
 -
 stdio.h
 -
 stdbool.h
 -
-malloc.h
+time.h
 -
-stdlib.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/sort/sort.h
 -
-math.h
--
-ctype.h
--
-
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string__test/string__test.h
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string_/string_.h
+C:/Users/blyatifull/cLionProjects/course/libs/algorithms/array/array.h
 -
 
 C:/Users/blyatifull/CLionProjects/course/main.c
-libs/data_structures/string__test/string__test.h
-C:/Users/blyatifull/CLionProjects/course/libs/data_structures/string__test/string__test.h
-libs/algorithms/array/array.h
-C:/Users/blyatifull/CLionProjects/course/libs/algorithms/array/array.h
+libs/data_structures/time_test/time_test.h
+C:/Users/blyatifull/CLionProjects/course/libs/data_structures/time_test/time_test.h
+
+C:/Users/blyatifull/cLionProjects/course/libs/algorithms/array/array.h
+stddef.h
+-
 

@@ -163,6 +163,36 @@ bitset\bitset.c.s:
 	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
 .PHONY : bitset\bitset.c.s
 
+dismath\dismath.obj: dismath\dismath.c.obj
+.PHONY : dismath\dismath.obj
+
+# target to build an object file
+dismath\dismath.c.obj:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\dismath\dismath.c.obj
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : dismath\dismath.c.obj
+
+dismath\dismath.i: dismath\dismath.c.i
+.PHONY : dismath\dismath.i
+
+# target to preprocess a source file
+dismath\dismath.c.i:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\dismath\dismath.c.i
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : dismath\dismath.c.i
+
+dismath\dismath.s: dismath\dismath.c.s
+.PHONY : dismath\dismath.s
+
+# target to generate assembly for a file
+dismath\dismath.c.s:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\dismath\dismath.c.s
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : dismath\dismath.c.s
+
 matrix\matrix.obj: matrix\matrix.c.obj
 .PHONY : matrix\matrix.obj
 
@@ -253,6 +283,36 @@ ordered_array_set\ordered_array_set.c.s:
 	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
 .PHONY : ordered_array_set\ordered_array_set.c.s
 
+sort\sort.obj: sort\sort.c.obj
+.PHONY : sort\sort.obj
+
+# target to build an object file
+sort\sort.c.obj:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\sort\sort.c.obj
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : sort\sort.c.obj
+
+sort\sort.i: sort\sort.c.i
+.PHONY : sort\sort.i
+
+# target to preprocess a source file
+sort\sort.c.i:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\sort\sort.c.i
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : sort\sort.c.i
+
+sort\sort.s: sort\sort.c.s
+.PHONY : sort\sort.s
+
+# target to generate assembly for a file
+sort\sort.c.s:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\sort\sort.c.s
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : sort\sort.c.s
+
 string_\string_.obj: string_\string_.c.obj
 .PHONY : string_\string_.obj
 
@@ -312,6 +372,36 @@ string__test\string__test.c.s:
 	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\string__test\string__test.c.s
 	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
 .PHONY : string__test\string__test.c.s
+
+time_test\time_test.obj: time_test\time_test.c.obj
+.PHONY : time_test\time_test.obj
+
+# target to build an object file
+time_test\time_test.c.obj:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.obj
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : time_test\time_test.c.obj
+
+time_test\time_test.i: time_test\time_test.c.i
+.PHONY : time_test\time_test.i
+
+# target to preprocess a source file
+time_test\time_test.c.i:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.i
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : time_test\time_test.c.i
+
+time_test\time_test.s: time_test\time_test.c.s
+.PHONY : time_test\time_test.s
+
+# target to generate assembly for a file
+time_test\time_test.c.s:
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make /nologo -$(MAKEFLAGS) libs\data_structures\CMakeFiles\data_structures.dir\time_test\time_test.c.s
+	cd C:\Users\blyatifull\CLionProjects\course\cmake-build-debug\libs\data_structures
+.PHONY : time_test\time_test.c.s
 
 unordered_array_set\unordered_array_set.obj: unordered_array_set\unordered_array_set.c.obj
 .PHONY : unordered_array_set\unordered_array_set.obj
@@ -445,6 +535,9 @@ help:
 	@echo ... bitset/bitset.obj
 	@echo ... bitset/bitset.i
 	@echo ... bitset/bitset.s
+	@echo ... dismath/dismath.obj
+	@echo ... dismath/dismath.i
+	@echo ... dismath/dismath.s
 	@echo ... matrix/matrix.obj
 	@echo ... matrix/matrix.i
 	@echo ... matrix/matrix.s
@@ -454,12 +547,18 @@ help:
 	@echo ... ordered_array_set/ordered_array_set.obj
 	@echo ... ordered_array_set/ordered_array_set.i
 	@echo ... ordered_array_set/ordered_array_set.s
+	@echo ... sort/sort.obj
+	@echo ... sort/sort.i
+	@echo ... sort/sort.s
 	@echo ... string_/string_.obj
 	@echo ... string_/string_.i
 	@echo ... string_/string_.s
 	@echo ... string__test/string__test.obj
 	@echo ... string__test/string__test.i
 	@echo ... string__test/string__test.s
+	@echo ... time_test/time_test.obj
+	@echo ... time_test/time_test.i
+	@echo ... time_test/time_test.s
 	@echo ... unordered_array_set/unordered_array_set.obj
 	@echo ... unordered_array_set/unordered_array_set.i
 	@echo ... unordered_array_set/unordered_array_set.s
